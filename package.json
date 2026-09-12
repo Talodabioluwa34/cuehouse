@@ -1,0 +1,8 @@
+{
+  "name": "cuehouse",
+  "private": true,
+  "scripts": {
+    "desktop": "npm run dev --prefix apps/desktop",
+    "desktop:build": "npm run build --prefix apps/desktop"
+  }
+}

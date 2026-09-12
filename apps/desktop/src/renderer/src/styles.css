@@ -1,0 +1,41 @@
+:root {
+  --bg-canvas: #070a0e;
+  --bg-surface: #0b0f14;
+  --bg-raised: #121820;
+  --text-primary: #f2f5f8;
+  --text-secondary: #a8b3c0;
+  --text-muted: #6b7785;
+  --text-brand: #2dd4bf;
+  --border: #1e2833;
+  --border-brand: #14b8a6;
+  --action-primary: #14b8a6;
+  --action-primary-text: #042f2e;
+  --action-danger: #dc2626;
+  --action-danger-text: #fff1f2;
+  --font-ui: 'Segoe UI', system-ui, sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

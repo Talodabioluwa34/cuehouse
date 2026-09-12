@@ -1,0 +1,31 @@
+.display {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px;
+  background: #000;
+}
+
+.display--black {
+  background: #000;
+}
+
+.display__ref {
+  margin: 0 0 28px;
+  color: #2dd4bf;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(28px, 4vw, 48px);
+  letter-spacing: 0.04em;
+}
+
+.display__text {
+  margin: 0;
+  max-width: 18ch;
+  color: #f8fafc;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(28px, 4.2vw, 52px);
+  line-height: 1.35;
+  text-align: center;
+}

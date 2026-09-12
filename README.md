@@ -1,42 +1,49 @@
 ﻿# CueHouse
 
-Control center for your church service — not presentation software.
+Control center for live scripture on the house screen.
 
-Pastor calls it → media finds it → congregation sees it.
+Pastor speaks → CueHouse detects → Present → congregation sees it.  
+When listen fails → **Manual** find → same Present → same house.
 
 ## Status
 
-- Name locked: **CueHouse** (2026-09-12)
-- PRD v1.0 present
-- Validation (Phase 0 interviews) not started
-- App code not started
+- Name locked: **CueHouse**
+- Dual input locked: Listen + Manual (`decisions/0003` in Talo clients)
+- Desktop spike: `apps/desktop` (Electron)
 
-## Docs
+## Run desktop (test)
 
-- [PRD.md](./PRD.md) — product requirements
-- [docs/naming.md](./docs/naming.md) — naming strategy (CueHouse locked)
+```bash
+cd apps/desktop
+npm install
+npm run dev
+```
 
-## Product
+From repo root:
 
-B2B SaaS for church live-service operations (Nigeria → Africa → global).
+```bash
+npm run desktop
+```
 
-**MVP wedge:** Service planning, Live Mode, instant scripture, songs, media library, display output.
+**What you can test now**
+1. **Open Display** — second window (house)
+2. **Start listening** / **Start in Manual** — mode switch in header
+3. **Present** — pushes sample Romans 8:28 to Display
+4. **BLACK** — clears house
+5. **Simulate mic fail** — banner + Switch to Manual
 
-**Not this product:** Church management (members, giving, attendance) — that is a different job (Vestry).
+STT / real Bible data not wired yet.
 
-## Planned structure
+## Structure
 
 ```text
 cuehouse/
-├── docs/           # Naming, discovery, research
-├── design/         # Tokens & foundations (later)
-├── apps/
-│   ├── web/        # Management UI (later)
-│   └── desktop/    # Live presentation (later)
+├── apps/desktop/   # Electron booth + house display
+├── docs/
 ├── PRD.md
 └── README.md
 ```
 
 ## Related
 
-Design agent project notes: Talo workspace `clients/cuehouse/`.
+Design notes: Talo workspace `clients/cuehouse/`.
